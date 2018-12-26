@@ -1,0 +1,109 @@
+<div class="home">
+  <el-container>
+    <el-aside width="256px">
+      <div class="logo"><img src="../../assets/images/logo.png" alt /></div>
+      <div class="nav">
+        <el-menu
+          default-active="1"
+          :unique-opened="true"
+          class="el-menu-vertical-demo"
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b"
+        >
+          <el-menu-item index="1">
+            <!-- <i class="el-icon-menu"></i> -->
+            <i class="iconfont icon-home"></i> <span slot="title">首页</span>
+          </el-menu-item>
+          <el-submenu index="2">
+            <template slot="title">
+              <!-- <i class="el-icon-menu"></i>  -->
+              <i class="iconfont icon-solution"></i> <span>用户管理</span>
+            </template>
+            <el-menu-item index="2-1">
+              <i class="el-icon-document"></i>选项1
+            </el-menu-item>
+            <el-menu-item index="2-2">
+              <i class="el-icon-document"></i>选项2
+            </el-menu-item>
+            <el-menu-item index="2-3">
+              <i class="el-icon-document"></i>选项3
+            </el-menu-item>
+          </el-submenu>
+
+          <el-menu-item index="3">
+            <!-- <i class="el-icon-menu"></i>  -->
+            <i class="iconfont icon-quanxianguanli"></i>
+            <span slot="title">权限管理</span>
+          </el-menu-item>
+          <el-submenu index="4">
+            <template slot="title">
+              <!-- <i class="el-icon-menu"></i>  -->
+              <i class="iconfont icon-xitongguanli"></i>
+              <span>系统基础功能</span>
+            </template>
+            <el-menu-item index="4-1">
+              <i class="el-icon-document"></i>选项1
+            </el-menu-item>
+            <el-menu-item index="4-2">
+              <i class="el-icon-document"></i>选项2
+            </el-menu-item>
+          </el-submenu>
+          <el-menu-item index="5">
+            <!-- <i class="el-icon-menu"></i>  -->
+            <i class="iconfont icon-yewu"></i>
+            <span slot="title">业务平台管理</span>
+          </el-menu-item>
+          <el-menu-item index="6">
+            <!-- <i class="el-icon-menu"></i>  -->
+            <i class="iconfont icon-fuwujiekou"></i>
+            <span slot="title">接口管理</span>
+          </el-menu-item>
+          <el-menu-item index="7">
+            <!-- <i class="el-icon-menu"></i> -->
+            <i class="iconfont icon-anliguanli"></i>
+            <span slot="title">功能测试案例录制</span>
+          </el-menu-item>
+          <el-menu-item index="8">
+            <i class="iconfont icon-anli-A"></i>
+            <span slot="title">系统测试案例录制</span>
+          </el-menu-item>
+          <el-menu-item index="9">
+            <i class="iconfont icon-navicon-dsrwpz"></i>
+            <span slot="title">定时任务</span>
+          </el-menu-item>
+        </el-menu>
+      </div>
+    </el-aside>
+    <el-container>
+      <el-header>
+        <div class="title">API接口自动化平台</div>
+        <div class="userinfo">
+          <img src="../../assets/images/headPic.jpg" alt="" />
+          <span class="nickname">永不止步</span>
+          <!-- <a
+            href="javascript:void(0);"
+            class="logout"
+            @click="dialogVisible = true"
+            >退出</a> -->
+          <i class="iconfont icon-logout" @click="dialogVisible = true"></i>
+        </div>
+      </el-header>
+      <el-main>Main</el-main>
+    </el-container>
+  </el-container>
+
+  <!-- 用户退出的模态框 -->
+  <el-dialog
+    title="提示"
+    :visible.sync="dialogVisible"
+    width="30%"
+    @close="dialogClose"
+  >
+    <span>您确定退出吗？</span>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="cancelLogout">取 消</el-button>
+      <el-button type="primary" @click="sureLogout">确 定</el-button>
+    </span>
+  </el-dialog>
+</div>

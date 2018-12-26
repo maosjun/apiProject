@@ -1,0 +1,87 @@
+//  home容器样式
+.home {
+  /* max-width: 1500px; */
+  min-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.el-container {
+  height: 100%;
+}
+.el-header {
+  // background-color: #b3c0d1;
+  color: #333;
+  text-align: left;
+  line-height: 60px;
+  height: 60px;
+  background-color: #fff;
+  .title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    float: left;
+  }
+  .userinfo {
+    float: right;
+    height: 100%;
+    font-size: 14px;
+    margin-right: 20px;
+    img {
+      height: 40%;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    .nickname {
+      margin: 5px;
+    }
+    .logout {
+      text-decoration: none;
+      color: #000;
+      // display: block;
+      // float: right;
+      // padding: 5px;
+      // &:hover {
+      //   background-color: #ccc;
+      // }
+    }
+    .icon-logout {
+      cursor: pointer;
+    }
+  }
+}
+.el-aside {
+  background-color: #3f3f3f;
+  color: #333;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  .iconfont {
+    font-size: 18px;
+    margin: 5px;
+  }
+  .logo {
+    height: 60px;
+    background-color: #3c8dbc;
+    img {
+      // margin-top: 15px;
+      height: 100%;
+    }
+  }
+  // 导航布局
+  .nav {
+    overflow: hidden;
+  }
+  .el-menu {
+    text-align: left;
+    // background-color: red !important;
+    width: 256px !important;
+  }
+  // 默认时背景色和hover时背景色
+  .el-submenu__title,
+  .el-menu-item {
+    background-color: #3f3f3f !important;
+    &:hover {
+      background-color: #000 !important;
+    }
+  }
+}
